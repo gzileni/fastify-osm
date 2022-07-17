@@ -9,7 +9,7 @@ Plugin for Fastify to perform [OverPass](https://overpass-api.de) queries on Ope
 ## Install
 
 ```bash
-npm i @fastify/osm
+npm i fastify-osm
 ```
 
 ## Usage

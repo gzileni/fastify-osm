@@ -1,0 +1,9 @@
+sudo: false
+language: node_js
+node_js:
+  - node 
+# whitelist
+branches:
+  only:
+    - gh-pages
+    - /.*/

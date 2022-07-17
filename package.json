@@ -1,8 +1,12 @@
 {
-  "name": "osm",
+  "name": "fastify-osm",
   "version": "1.0.0",
-  "description": "",
+  "description": "Plugin for Fastify to perform queries on OpenStreetMap",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gzileni/fastify-osm"
+  },
   "directories": {
     "test": "test"
   },
@@ -14,8 +18,8 @@
     "test:typescript": "tsd",
     "unit": "tap test/**/*.test.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["OpenStreetMap", "Fastify"],
+  "author": "Giuseppe Zileni <giuseppe.zileni@gmail.com>",
   "license": "MIT",
   "types": "index.d.ts",
   "dependencies": {

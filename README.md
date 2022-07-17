@@ -1,21 +1,20 @@
-# __MY_PLUGIN__
+# @fastify/osm
 
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)  ![CI workflow](__MY_PLUGIN_URL__
-/workflows/CI%20workflow/badge.svg)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)  ![CI workflow](https://github.com/gzileni/-fastify-osm/workflows/CI%20workflow/badge.svg)
 
 Supports Fastify versions `3.x`
 
 ## Install
 ```
-npm i __MY_PLUGIN__
+npm i @fastify/osm
 ```
 
 ## Usage
-Require `__MY_PLUGIN__` and register.
+Require `@fastify/osm` and register.
 ```js
 const fastify = require('fastify')()
 
-fastify.register(require('__MY_PLUGIN__'), {
+fastify.register(require('@fastify/osm'), {
   // put your options here
 })
 

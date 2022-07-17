@@ -43,7 +43,7 @@ const buffer = 0.5
 /** Units supported are miles, kilometers (default), and degrees. */
 const units = 'kilometers'
 /** GeoJSON results */
-const response = fastify.osm.osm(bbox, queries, buffer, units)
+const response = fastify.osm(bbox, queries, buffer, units)
 console.log(JSON.stringify(response));
 
 fastify.listen(3000)

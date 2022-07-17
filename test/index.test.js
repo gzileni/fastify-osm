@@ -16,8 +16,8 @@ test('should register the correct decorator', async t => {
     '45.697715074360916'
   ]
   const queries = ['military=airfield', 'highway', 'landuse=industrial']
-  const buffer = 10
-  const units = 'meters'
+  const buffer = 0.5
+  const units = 'kilometers'
   const response = app.osm(bbox, queries, buffer, units)
   console.log(JSON.stringify(response))
   t.type(response, Object)

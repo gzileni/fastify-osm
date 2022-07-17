@@ -8,7 +8,7 @@ const fp = require('fastify-plugin')
 
 module.exports = fp(async function (fastify, opts) {
   fastify.decorate('osm', async (bbox, queries, buffer, unit) => {
-    const u = unit !== null && unit !== undefined ? unit : 'meters'
+    const u = unit !== null && unit !== undefined ? unit : 'kilometers'
 
     const bb = bbox.join(',')
     let q = '[out:json][timeout:25];('
@@ -19,10 +19,8 @@ module.exports = fp(async function (fastify, opts) {
     })
     if (buffer !== null && buffer !== undefined) {
       const resultOsmGeojsonBuffered = turf.buffer(resultOsmGeojson, buffer, { units: u })
-      console.log('Buffered: ' + JSON.stringify(resultOsmGeojsonBuffered))
       return resultOsmGeojsonBuffered
     } else {
-      console.log(JSON.stringify(resultOsmGeojson))
       return resultOsmGeojson
     }
   })

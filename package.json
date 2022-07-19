@@ -1,6 +1,6 @@
 {
   "name": "fastify-osm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plugin for Fastify to perform queries on OpenStreetMap",
   "main": "index.js",
   "repository": {

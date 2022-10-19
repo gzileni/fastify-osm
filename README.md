@@ -37,15 +37,15 @@ const bbox = [
  * highway -> all roads
  * landuse=industrial
  * */
-const queries = ['military=airfield', 'highway', 'landuse=industrial']
-/** Calculates a buffer for input features for a given radius. */
-const buffer = 0.5
-/** Units supported are miles, kilometers (default), and degrees. */
-const units = 'kilometers'
+const params = {
+  queries: ['military=airfield', 'highway', 'landuse=industrial'],
+  buffer: 0.5,          // Calculates a buffer for input features for a given radius.
+  units: 'kilometers',  // Units supported are miles, kilometers (default), and degrees.
+  endpoint: 'https://overpass-api.de/api/interpreter'  // DEFAULT: https://overpass-api.de/api/interpreter
+}
 /** GeoJSON results */
-const response = fastify.osm(bbox, queries, buffer, units)
+const response = fastify.osm(params)
 console.log(JSON.stringify(response));
-
 fastify.listen(3000)
 ```
 

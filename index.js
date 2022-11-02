@@ -18,7 +18,7 @@ module.exports = fp(async function (fastify, opts) {
     const resultOsmGeojson = osmtogeojson({
       elements: await queryOverpass(q, { endpoint: endpoint })
     })
-    if (buffer !== null && buffer !== undefined) {
+    if (params.buffer !== null && params.buffer !== undefined) {
       const resultOsmGeojsonBuffered = turf.buffer(resultOsmGeojson, params.buffer, { units: u })
       return resultOsmGeojsonBuffered
     } else {
